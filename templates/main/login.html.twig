@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <form action="{{ path('app_login') }}"  method="POST">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" name="_username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Votre email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Mot de passe</label>
+                <input type="password" name="_password" class="form-control" placeholder="Votre mot de passe" required>
+            </div>
+
+
+
+            <button type="submit" class="btn btn-primary">Connexion</button>
+        </form>
+        <br>
+        <a href="{{ path('app_inscription') }}"><button  class="btn btn-secondary">Aller à la page Inscription</button></a>
+    </div>
+
+{% endblock %}

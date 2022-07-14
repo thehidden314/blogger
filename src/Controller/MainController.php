@@ -13,7 +13,7 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class MainController extends AbstractController
 {
-    #[Route('/', name: 'app_login')]
+    #[Route('/', name: 'app_home')]
     public function index(): Response
     {
         return $this->render('main/index.html.twig', [
@@ -50,5 +50,19 @@ class MainController extends AbstractController
         return $this->render('main/inscription.html.twig', [
             
         ]);
+    }
+
+    #[Route('/login', name: 'app_login')]
+    public function login(): Response
+    {
+        return $this->render('main/login.html.twig', [
+            
+        ]);
+    }
+
+    #[Route('/deconnexion', name: 'app_logout')]
+    public function logout(): Response
+    {
+        
     }
 }
