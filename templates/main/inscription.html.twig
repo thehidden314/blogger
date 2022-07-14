@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <form action="{{ path('app_inscription') }}"  method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Votre email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Mot de passe</label>
+                <input type="password" name="password" class="form-control" placeholder="Votre mot de passe" required>
+            </div>
+
+             <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Prénom</label>
+                <input type="text" name="prenom" class="form-control" placeholder="Votre prénom" required>
+            </div>
+
+             <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nom</label>
+                <input type="text" name="nom" class="form-control" placeholder="Votre nom" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Photo</label>
+                <input type="file" name="photo" class="form-control" placeholder="Votre nom">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+        </form>
+    </div>
+
+{% endblock %}
